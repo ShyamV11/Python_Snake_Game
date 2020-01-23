@@ -9,11 +9,11 @@ w.keypad(1)
 w.timeout(100)
 
 snk_x = sw/4
-snk_y = sw/2
+snk_y = sh/2
 snake = [
-    [snk_y,snk_x],
-    [snk_y,snk_x-1],
-    [snk_y,snk_x-2]
+    [snk_y, snk_x],
+    [snk_y, snk_x-1],
+    [snk_y, snk_x-2]
 ]
 
 food = [sh/2, sw/2]
@@ -25,7 +25,7 @@ while True:
     next_key = w.getch()
     key = key if next_key == -1  else next_key
 
-    if snake[0][0] in [0,sh] or snake[0][1] in [o,sw] or snake[0] in snake[1:]:
+    if snake[0][0] in [0, sh] or snake[0][1] in [o, sw] or snake[0] in snake[1:]:
         curses.endwin()
         quit()
 
