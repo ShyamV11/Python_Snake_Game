@@ -54,4 +54,4 @@ while True:
     else:
         tail = snake.pop()
         w.addch(int(tail[0]), int(tail[1]), '')
-    w.addch(snake[0][0], snake[0][1], curses.ACS_CKBOARD)
+    w.addch(int(snake[0][0]), int(snake[0][1]), curses.ACS_CKBOARD)
